@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { toggleComplete, deleteTodo } from "./../../redux/todoSlice";
-import { FiX } from "react-icons/fi";
+import { FiX, FiCheck } from "react-icons/fi";
+import Checkbox from "react-custom-checkbox";
 
 export default function TodoItem({ id, title, completed }) {
   const dispatch = useDispatch();
@@ -14,15 +15,19 @@ export default function TodoItem({ id, title, completed }) {
   };
 
   return (
-    <li className={`list-group-item ${completed && "list-group-item-success"}`}>
-      <div className="flex justify-between">
+    <li
+      className={`${completed && "line-through"}`}
+      onClick={handleCheckboxClick}
+    >
+      <div className="flex justify-between sm:text-sm mb-3">
         <span className="flex items-center">
-          <input
-            type="checkbox"
+          <Checkbox
+            icon={FiCheck()}
+            borderColor="#57534E"
             className="mr-3"
             onClick={handleCheckboxClick}
             checked={completed}
-          ></input>
+          ></Checkbox>
           {title}
         </span>
         <button onClick={handleDeleteClick} className="">

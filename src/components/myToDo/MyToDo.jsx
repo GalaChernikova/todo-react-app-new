@@ -18,35 +18,21 @@ export default function MyToDo() {
 	};
 
   return (
-    <div className="flex flex-col font-main text-2xl text-stone-600 bg-red-50 rounded-2xl p-4 w-1/3">
+    <div className="flex flex-col font-main text-2xl text-stone-600 bg-red-50 rounded-2xl w-1/3">
 		<form onSubmit={onSubmit} className='my-3'>
 			<label className='sr-only'>Name</label>
 			<input
 				type='text'
-				className=''
+				className='rounded-xl px-5 py-2 text-lg mb-3 w-80 border-stone-600 border-2 bg-red-50'
 				placeholder='Add todo...'
 				value={value}
 				onChange={(event) => setValue(event.target.value)}
 			></input>
 
-			<button type='submit' className=''>
-				Submit
+			<button type='submit' className='text-lg bg-stone-600 rounded-xl text-red-50 drop-shadow-xl py-2 px-5 w-36 hover:bg-stone-800'>
+				Add task
 			</button>
 		</form>
-        {/* <div className="flex">
-            <input
-                type="checkbox"
-                name="taskDone"
-                id="taskDone"
-                onClick={() => dispatch(completeTask)}
-            />
-            <span>{todo}</span>            
-        </div>
-
-        <div className="flex gap-x-5">
-            <button onClick={() => dispatch(addTask)} className="w-1/2 border-2 border-stone-600 rounded-xl py-1 text-base bg-stone-600 text-red-50 hover:bg-stone-800">Add task</button>
-            <button onClick={() => dispatch(removeTask)} className="w-1/2 border-2 border-stone-600 rounded-xl py-1 text-base hover:bg-red-100">Remove Task</button>            
-        </div> */}
 
 
     </div>
