@@ -1,0 +1,24 @@
+.css-1poimk-MuiPaper-root-MuiMenu-paper-MuiPaper-root-MuiPopover-paper {
+    background-color: #FEF2F2 !important;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+    color: #57534E !important;
+}
+
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root svg {
+    width: 24px !important;
+    height: 24px !important;
+}
+
+.mobileNav{
+    display: none;
+}
+
+@media (max-width: 1023px) {
+    .mobileNav{
+       display: block; 
+       margin-right: 20px;
+    }
+    
+}
