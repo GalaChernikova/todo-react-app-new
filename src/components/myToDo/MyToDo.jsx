@@ -18,18 +18,18 @@ export default function MyToDo() {
 	};
 
   return (
-    <div className="flex flex-col font-main text-2xl text-stone-600 bg-red-50 rounded-2xl w-1/3">
+    <div className="flex flex-col font-main text-stone-600 bg-red-50 rounded-2xl w-1/3">
 		<form onSubmit={onSubmit} className='my-3'>
 			<label className='sr-only'>Name</label>
 			<input
 				type='text'
-				className='rounded-xl px-5 py-2 text-lg mb-3 w-80 border-stone-600 border-2 bg-red-50'
+				className='rounded-xl px-5 py-2 text-lg mb-3 w-80 border-stone-600 border-2 bg-red-50 sm:w-48 sm:text-sm'
 				placeholder='Add todo...'
 				value={value}
 				onChange={(event) => setValue(event.target.value)}
 			></input>
 
-			<button type='submit' className='text-lg bg-stone-600 rounded-xl text-red-50 drop-shadow-xl py-2 px-5 w-36 hover:bg-stone-800'>
+			<button type='submit' className='text-lg bg-stone-600 rounded-xl text-red-50 drop-shadow-xl py-2 px-5 w-36 hover:bg-stone-800 sm:text-sm'>
 				Add task
 			</button>
 		</form>

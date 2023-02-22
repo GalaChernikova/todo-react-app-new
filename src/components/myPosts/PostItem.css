@@ -1,0 +1,56 @@
+#card {
+    background-color: #FEF2F2;
+    border-radius: 1rem;
+}
+
+#avatar{
+    color: #FEF2F2;
+}
+
+.MuiCardHeader-title{
+    font-family: 'Gloock' !important;
+    font-size: 19px !important;
+    font-weight: 500 !important;
+    line-height: 25px !important;
+    margin-bottom: 5px !important;
+}
+.MuiCardHeader-subheader{
+    font-family: 'Quicksand' !important;
+}
+
+#postBody{
+    font-family: 'Quicksand' !important;
+    font-weight: 500 !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
+}
+
+#heartButton{
+    font-family: 'Gloock' !important;
+    font-size: 19px !important;
+    font-weight: 500 !important;
+}
+
+@media (max-width: 2000px) {
+    #card{
+        max-width: 100%;
+    }
+    
+}
+
+@media (max-width: 639px) {
+    .MuiCardHeader-title {  
+        font-size: 17px !important;
+        line-height: 22px !important;
+        margin-bottom: 0 !important;
+    }
+
+    #postBody {
+        font-size: 16px !important;
+        line-height: 20px !important;
+    }
+
+    #heartButton {
+        font-size: 16px !important;
+    }
+}
