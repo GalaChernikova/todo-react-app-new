@@ -2,13 +2,13 @@
     background-color: #FEF2F2 !important;
 }
 
-Button {
+.mobNavButton{
     color: #57534E !important;
     width: 24px !important;
     height: 24px !important;
 }
 
-Button svg {
+.mobNavButton svg {
     width: 24px !important;
     height: 24px !important;
 }

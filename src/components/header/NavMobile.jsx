@@ -24,6 +24,8 @@ export default function NavMobile() {
         aria-haspopup="true"
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
+        className="mobNavButton"
+        
       >
         {FiMenu()}
       </Button>
@@ -39,19 +41,19 @@ export default function NavMobile() {
       >
         <MenuItem onClick={handleClose}>
           <NavLink to="/general" className="flex items-center">
-            <p className="mr-3 font-main text-stone-600">MY TO-DO </p>
+            <p className="mr-3 font-main text-stone-600 hover:underline">MY TO-DO </p>
             {FiCheckSquare()}
           </NavLink>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <NavLink to="/friends" className="flex items-center">
-            <p className="mr-3 font-main text-stone-600">FRIENDS</p>
+            <p className="mr-3 font-main text-stone-600 hover:underline">FRIENDS</p>
             {FiUsers()}
           </NavLink>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <NavLink to="/about" className="flex items-center">
-            <p className="mr-3 font-main text-stone-600">ABOUT</p>
+            <p className="mr-3 font-main text-stone-600 hover:underline">ABOUT</p>
             {FiHeart()}
           </NavLink>
         </MenuItem>

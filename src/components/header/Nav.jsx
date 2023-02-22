@@ -12,15 +12,15 @@ export default function Nav() {
 
       <div className="flex justify-between items-center w-2/3 mr-[30px] lg:hidden">
         <NavLink to="/general" className="flex items-center">
-          <p className="mr-3">MY TO-DO </p>
+          <p className="mr-3 hover:underline">MY TO-DO </p>
           {FiCheckSquare()}
         </NavLink>
         <NavLink to="/friends" className="flex items-center">
-          <p className="mr-3">FRIENDS</p>
+          <p className="mr-3 hover:underline">FRIENDS</p>
           {FiUsers()}
         </NavLink>
         <NavLink to="/about" className="flex items-center">
-          <p className="mr-3">ABOUT</p>
+          <p className="mr-3 hover:underline">ABOUT</p>
           {FiHeart()}
         </NavLink>
       </div>
