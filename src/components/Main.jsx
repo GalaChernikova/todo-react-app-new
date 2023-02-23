@@ -11,7 +11,7 @@ export default function Main() {
         </Fade>
       </h1>
 
-      <div className="flex justify-between font-main text-red-50 drop-shadow-xl text-3xl max-w-4xl w-full mx-auto text-start mb-16  lg:max-w-lg lg:mb-12 lg:flex-col md:max-w-min md:text-start sm:text-base sm:w-72 sm:mb-8">
+      <div className="flex justify-between font-main text-red-50 drop-shadow-xl text-3xl max-w-4xl w-full mx-auto text-start mb-16  lg:max-w-lg lg:mb-12 lg:flex-col md:max-w-min md:text-start sm:text-lg sm:w-72 sm:mb-8">
         <Fade cascade>
           <div className="flex lg:items-baseline">
             {FiCheckSquare()}

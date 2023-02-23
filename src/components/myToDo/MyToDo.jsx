@@ -29,7 +29,7 @@ export default function MyToDo() {
 				onChange={(event) => setValue(event.target.value)}
 			></input>
 
-			<button type='submit' className='text-lg bg-stone-600 rounded-xl text-orange-50 drop-shadow-xl py-2 px-5 w-36 hover:bg-stone-800 sm:text-sm'>
+			<button type='submit' className='text-lg bg-stone-600 rounded-xl text-white-bg drop-shadow-xl py-2 px-5 w-36 hover:bg-stone-800 sm:text-sm'>
 				Add task
 			</button>
 		</form>

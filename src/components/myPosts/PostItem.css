@@ -4,7 +4,7 @@
 }
 
 #avatar {
-    color: #FFF7ED;
+    color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .MuiCardHeader-title {
@@ -32,7 +32,7 @@
     font-weight: 500 !important;
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 3000px) {
     #card {
         max-width: 100%;
     }
