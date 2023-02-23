@@ -7,7 +7,6 @@ module.exports = {
     fontFamily: {
       'title': 'Gloock',
       'main': 'Quicksand',
-      'content': 'Caveat',
     },
     extend: {
       backgroundImage: {

@@ -20,8 +20,8 @@ export default function TodoItem({ id, title, completed }) {
       onClick={handleCheckboxClick}
       key={id}
     >
-      <div className="flex justify-between sm:text-sm mb-3">
-        <span className="flex items-center font-content text-3xl sm:text-xl">
+      <div className="flex justify-between sm:text-sm mb-2">
+        <span className="flex items-center font-main text-lg sm:text-base">
           <Checkbox
             icon={FiCheck()}
             borderColor="#57534E"

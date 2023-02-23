@@ -5,11 +5,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Gloock&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
-body{
-    background: rgb(238,174,202);
-background: linear-gradient(270deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+
+body {
+    background: rgb(238, 174, 202);
+    background: linear-gradient(270deg, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
 }
 
-/* background orange-50 #FFF7ED */
