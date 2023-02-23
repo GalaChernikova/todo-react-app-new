@@ -1,45 +1,46 @@
 #card {
-    background-color: #FEF2F2;
+    background: rgba(255, 255, 255, 0.5) !important; 
     border-radius: 1rem;
 }
 
-#avatar{
-    color: #FEF2F2;
+#avatar {
+    color: #FFF7ED;
 }
 
-.MuiCardHeader-title{
+.MuiCardHeader-title {
     font-family: 'Gloock' !important;
     font-size: 19px !important;
     font-weight: 500 !important;
     line-height: 25px !important;
     margin-bottom: 5px !important;
 }
-.MuiCardHeader-subheader{
+
+.MuiCardHeader-subheader {
     font-family: 'Quicksand' !important;
 }
 
-#postBody{
+#postBody {
     font-family: 'Quicksand' !important;
     font-weight: 500 !important;
     font-size: 18px !important;
     line-height: 22px !important;
 }
 
-#heartButton{
+#heartButton {
     font-family: 'Gloock' !important;
     font-size: 19px !important;
     font-weight: 500 !important;
 }
 
 @media (max-width: 2000px) {
-    #card{
+    #card {
         max-width: 100%;
     }
-    
+
 }
 
 @media (max-width: 639px) {
-    .MuiCardHeader-title {  
+    .MuiCardHeader-title {
         font-size: 17px !important;
         line-height: 22px !important;
         margin-bottom: 0 !important;

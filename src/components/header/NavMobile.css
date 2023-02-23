@@ -1,5 +1,10 @@
-.MuiList-root {
-    background-color: #FEF2F2 !important;
+#nav{
+    background: rgba(255, 255, 255, 0.5)
+}
+
+.MuiMenu-list {
+    background-color: #e2d2e2;
+
 }
 
 .mobNavButton{

@@ -13,6 +13,9 @@ module.exports = {
       backgroundImage: {
         'main': "url('/src/images/mainpic.png')"
       },
+      colors: {
+        'white-bg': 'rgba(255, 255, 255, 0.5)'
+      }
     },
     screens: {
       '2xl': {'max': '1535px'},
