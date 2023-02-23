@@ -6,7 +6,7 @@ export default function MyPosts() {
   const [posts, setPosts] = useState("");
   useEffect(() => {
     axios
-      .get("https://dummyjson.com/posts/user/5")
+      .get("https://dummyjson.com/posts/user/2")
       .then((res) => setPosts(res.data.posts));
   }, []);
   console.log(posts);

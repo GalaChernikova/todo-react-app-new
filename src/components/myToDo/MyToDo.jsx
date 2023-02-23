@@ -18,12 +18,12 @@ export default function MyToDo() {
 	};
 
   return (
-    <div className="flex flex-col font-main text-stone-600 w-1/3">
-		<form onSubmit={onSubmit} className='my-3'>
+    <div className="flex flex-col font-main text-stone-600">
+		<form onSubmit={onSubmit} className='my-3 max-w-md w-full lg:max-w-lg'>
 			<label className='sr-only'>Name</label>
 			<input
 				type='text'
-				className='rounded-xl px-5 py-2 text-lg mb-3 w-80 border-stone-600 border-2 bg-transparent sm:w-48 sm:text-sm'
+				className='rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm'
 				placeholder='Add todo...'
 				value={value}
 				onChange={(event) => setValue(event.target.value)}
