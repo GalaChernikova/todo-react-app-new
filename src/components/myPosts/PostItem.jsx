@@ -28,7 +28,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function PostItem({ id, title, body, tags, reactions }) {
+export default function PostItem({ id, date, title, body, reactions }) {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
@@ -61,7 +61,7 @@ export default function PostItem({ id, title, body, tags, reactions }) {
         <CardActions disableSpacing>
           <IconButton aria-label="add to favorites" id="heartButton">
             <FavoriteIcon />
-            {reactions}
+            <p id="reactions">{reactions}</p>
           </IconButton>
           <IconButton aria-label="share">
             <ShareIcon />

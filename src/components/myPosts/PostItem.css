@@ -32,6 +32,10 @@
     font-weight: 500 !important;
 }
 
+#reactions{
+    margin-left: 5px;
+}
+
 @media (max-width: 3000px) {
     #card {
         max-width: 100%;

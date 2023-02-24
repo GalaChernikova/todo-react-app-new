@@ -5,7 +5,7 @@ import NavMobile from "./NavMobile";
 
 export default function Nav() {
   return (
-    <div className="flex justify-between items-center w-10/12 mx-auto font-main text-2xl text-stone-600 bg-orange-50 drop-shadow rounded-2xl py-2 my-4" id="nav">
+    <div className="flex justify-between items-center w-10/12 mx-auto font-main text-2xl text-stone-600 bg-orange-50 drop-shadow rounded-2xl py-3 my-4" id="nav">
       <NavLink to="*">
         <Logo />
       </NavLink>

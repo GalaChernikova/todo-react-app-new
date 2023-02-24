@@ -5,7 +5,7 @@ import TodoList from "./myToDo/TodoList";
 
 export default function GeneralPage(){
     return(
-        <div className="w-10/12 mx-auto min-h-screen flex flex-col sm:w-full">
+        <div className="w-10/12 mx-auto mb-10 min-h-screen flex flex-col sm:w-full">
             <Nav />
             
             <div className="flex gap-5 w-10/12 mx-auto justify-between lg:flex-col lg:justify-center">

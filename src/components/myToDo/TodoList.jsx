@@ -6,7 +6,7 @@ export default function TodoList() {
 	const todos = useSelector((state) => state.todos);
 
 	return (
-		<ul className=''>
+		<ul>
 			{todos.map((todo) => (
 				<TodoItem id={todo.id} title={todo.title} completed={todo.completed} key={todo.id}/>
 			))}
