@@ -50,7 +50,7 @@ export default function PostItem({ id, date, title, body, reactions }) {
             </IconButton>
           }
           title={title}
-          subheader="January 14, 2023"
+          subheader={date}
           id="cardHeader"
         />
         <CardContent>

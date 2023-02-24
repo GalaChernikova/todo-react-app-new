@@ -8,7 +8,7 @@ export default function MyPosts() {
     <div className="flex flex-wrap gap-5 justify-end">
       {posts.map((post) => {
         return (
-          <div>
+          <div key={post.id}>
             <PostItem
               id={post.id}
               date={post.date}
