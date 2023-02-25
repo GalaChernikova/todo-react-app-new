@@ -14,8 +14,11 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import ClearIcon from '@mui/icons-material/Clear';
 import style from "./PostItem.css";
 import { FiUser } from "react-icons/fi";
+import { useDispatch } from "react-redux";
+import { deletePost } from "../../redux/postSlice";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -30,14 +33,19 @@ const ExpandMore = styled((props) => {
 
 export default function PostItem({ id, date, title, body, reactions }) {
   const [expanded, setExpanded] = useState(false);
+  const dispatch = useDispatch();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
+  const handleDeletePost = () => {
+    dispatch(deletePost({id}))
+  }
+
   return (
     <div>
-      <Card sx={{ maxWidth: 345 }} className={style} id="card" key={id}>
+      <Card className={style} id="card" key={id}>
         <CardHeader
           avatar={
             <Avatar sx={{ bgcolor: grey[700] }} className={style} id="avatar">
@@ -46,7 +54,9 @@ export default function PostItem({ id, date, title, body, reactions }) {
           }
           action={
             <IconButton aria-label="settings">
-              <MoreVertIcon />
+              <ClearIcon 
+              onClick={handleDeletePost}
+              />
             </IconButton>
           }
           title={title}
