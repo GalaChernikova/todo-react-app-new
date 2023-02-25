@@ -13,12 +13,14 @@ import { grey } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
-import ClearIcon from '@mui/icons-material/Clear';
+import ClearIcon from "@mui/icons-material/Clear";
 import style from "./PostItem.css";
 import { FiUser } from "react-icons/fi";
 import { useDispatch } from "react-redux";
-import { deletePost } from "../../redux/postSlice";
+import { deletePost, addReaction } from "../../redux/postSlice";
+import avatar from "./../../images/avatar.png";
+import Rating from "@mui/material/Rating";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -31,8 +33,15 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
+const StyledRating = styled(Rating)({
+  "& .MuiRating-iconFilled": {
+    color: "#ff6d75",
+  },
+});
+
 export default function PostItem({ id, date, title, body, reactions }) {
   const [expanded, setExpanded] = useState(false);
+
   const dispatch = useDispatch();
 
   const handleExpandClick = () => {
@@ -40,23 +49,21 @@ export default function PostItem({ id, date, title, body, reactions }) {
   };
 
   const handleDeletePost = () => {
-    dispatch(deletePost({id}))
-  }
+    dispatch(deletePost({ id }));
+  };
 
   return (
     <div>
       <Card className={style} id="card" key={id}>
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: grey[700] }} className={style} id="avatar">
+            <Avatar src={avatar} id="avatar">
               {FiUser()}
             </Avatar>
           }
           action={
             <IconButton aria-label="settings">
-              <ClearIcon 
-              onClick={handleDeletePost}
-              />
+              <ClearIcon onClick={handleDeletePost} />
             </IconButton>
           }
           title={title}
@@ -70,7 +77,16 @@ export default function PostItem({ id, date, title, body, reactions }) {
         </CardContent>
         <CardActions disableSpacing>
           <IconButton aria-label="add to favorites" id="heartButton">
-            <FavoriteIcon />
+            <StyledRating
+              name="customized-color"
+              defaultValue={3}
+              getLabelText={(value) =>
+                `${value} Heart${value !== 1 ? "s" : ""}`
+              }
+              precision={0.5}
+              icon={<FavoriteIcon fontSize="inherit" />}
+              emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
+            />
             <p id="reactions">{reactions}</p>
           </IconButton>
           <IconButton aria-label="share">

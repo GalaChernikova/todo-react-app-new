@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 export default function AddPost() {
   const [newTitle, setNewTitle] = useState("");
   const [newPost, setNewPost] = useState("");
+
   const dispatch = useDispatch();
 
   const onSubmitPost = (event) => {

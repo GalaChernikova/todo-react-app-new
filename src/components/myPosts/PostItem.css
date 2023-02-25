@@ -38,8 +38,9 @@
 }
 
 @media (max-width: 3000px) {
-    #card {
+    .MuiCard-root {
         max-width: 100%;
+        width: 100%;
     }
 
 }

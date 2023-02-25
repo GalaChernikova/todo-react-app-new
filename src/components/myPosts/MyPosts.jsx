@@ -6,10 +6,10 @@ export default function MyPosts() {
   const posts = useSelector((state) => state.posts);
 
   return (
-    <div className="flex flex-wrap gap-5">
+    <div className="flex flex-col gap-5">
       <AddPost />
 
-      <div className="flex flex-wrap gap-5">
+      <div className="flex flex-col-reverse gap-5">
         {posts.map((post) => {
           return (
             <div key={post.id}>
