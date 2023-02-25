@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 let date = new Date();
 let currentDate = date.toUTCString()
-console.log(currentDate)
+
 
 export const postSlice = createSlice({
   name: "post",

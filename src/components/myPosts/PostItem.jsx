@@ -21,6 +21,7 @@ import { deletePost, addReaction } from "../../redux/postSlice";
 import avatar from "./../../images/avatar.png";
 import Rating from "@mui/material/Rating";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import Comments from "../comments/Comments";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -103,10 +104,9 @@ export default function PostItem({ id, date, title, body, reactions }) {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>Method:</Typography>
+            
             <Typography paragraph>
-              Heat 1/2 cup of the broth in a pot until simmering, add saffron
-              and set aside for 10 minutes.
+              <Comments />
             </Typography>
           </CardContent>
         </Collapse>
