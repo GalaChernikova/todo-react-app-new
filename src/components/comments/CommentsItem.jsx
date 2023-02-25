@@ -1,10 +1,10 @@
 
 
-export default function CommentsItem({id, name, text}){
+export default function CommentsItem({comId, comName, comText}){
     return(
-        <div key={id}>
-            <p>{name}</p>
-            <p>{text}</p>
+        <div key={comId}>
+            <div>{comName}</div>
+            <div>{comText}</div>
         </div>
     )
 }

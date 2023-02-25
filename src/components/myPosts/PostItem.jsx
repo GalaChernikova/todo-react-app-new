@@ -9,7 +9,6 @@ import Collapse from "@mui/material/Collapse";
 import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
-import { grey } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
@@ -17,7 +16,7 @@ import ClearIcon from "@mui/icons-material/Clear";
 import style from "./PostItem.css";
 import { FiUser } from "react-icons/fi";
 import { useDispatch } from "react-redux";
-import { deletePost, addReaction } from "../../redux/postSlice";
+import { deletePost } from "../../redux/postSlice";
 import avatar from "./../../images/avatar.png";
 import Rating from "@mui/material/Rating";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -63,8 +62,8 @@ export default function PostItem({ id, date, title, body, reactions }) {
             </Avatar>
           }
           action={
-            <IconButton aria-label="settings">
-              <ClearIcon onClick={handleDeletePost} />
+            <IconButton aria-label="settings" onClick={handleDeletePost}>
+              <ClearIcon  />
             </IconButton>
           }
           title={title}
@@ -80,7 +79,7 @@ export default function PostItem({ id, date, title, body, reactions }) {
           <IconButton aria-label="add to favorites" id="heartButton">
             <StyledRating
               name="customized-color"
-              defaultValue={3}
+              defaultValue={3.5}
               getLabelText={(value) =>
                 `${value} Heart${value !== 1 ? "s" : ""}`
               }
@@ -104,7 +103,6 @@ export default function PostItem({ id, date, title, body, reactions }) {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            
             <Typography paragraph>
               <Comments />
             </Typography>

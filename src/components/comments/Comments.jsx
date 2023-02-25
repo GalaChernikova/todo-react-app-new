@@ -2,21 +2,25 @@ import { useSelector } from "react-redux";
 import CommentsItem from "./CommentsItem";
 
 export default function Comments(){
-    const comments = useSelector((state) => state.comments);
-
+    const allComments = useSelector((state) => state.posts);
+console.log(allComments)
     return (
         <div>
-            {comments.map((comment) => {
+            {Array.from(allComments).map((comment) => {
                 return (
-                    <div key={comment.id}>
+                    <div key={comment.comments.comId}>
                         <CommentsItem 
-                            id={comment.id}
-                            name={comment.name}
-                            text={comment.text}
+                            comId={comment.comments.comId}
+                            comName={comment.comments.comName}
+                            comText={comment.comments.comText}
+
+                            
                         />
+                        
                     </div>
                 )
             })}
+            
             
         </div>
     )
