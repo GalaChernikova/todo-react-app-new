@@ -13,10 +13,9 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ClearIcon from "@mui/icons-material/Clear";
-import style from "./PostItem.css";
 import { FiUser } from "react-icons/fi";
 import { useDispatch } from "react-redux";
-import { deletePost } from "../../redux/postSlice";
+import { deleteComment, deletePost } from "../../redux/postSlice";
 import avatar from "./../../images/avatar.png";
 import Rating from "@mui/material/Rating";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
@@ -39,7 +38,13 @@ const StyledRating = styled(Rating)({
   },
 });
 
-export default function PostItem({ id, date, title, body, reactions }) {
+export default function PostItem({
+  id,
+  date,
+  title,
+  body,
+  comments
+}) {
   const [expanded, setExpanded] = useState(false);
 
   const dispatch = useDispatch();
@@ -52,9 +57,13 @@ export default function PostItem({ id, date, title, body, reactions }) {
     dispatch(deletePost({ id }));
   };
 
+  const handleDeleteComment = () => {
+    dispatch(deleteComment({ id }));
+  };
+
   return (
     <div>
-      <Card className={style} id="card" key={id}>
+      <Card id="card" key={id}>
         <CardHeader
           avatar={
             <Avatar src={avatar} id="avatar">
@@ -63,7 +72,7 @@ export default function PostItem({ id, date, title, body, reactions }) {
           }
           action={
             <IconButton aria-label="settings" onClick={handleDeletePost}>
-              <ClearIcon  />
+              <ClearIcon />
             </IconButton>
           }
           title={title}
@@ -87,7 +96,6 @@ export default function PostItem({ id, date, title, body, reactions }) {
               icon={<FavoriteIcon fontSize="inherit" />}
               emptyIcon={<FavoriteBorderIcon fontSize="inherit" />}
             />
-            <p id="reactions">{reactions}</p>
           </IconButton>
           <IconButton aria-label="share">
             <ShareIcon />
@@ -103,9 +111,29 @@ export default function PostItem({ id, date, title, body, reactions }) {
         </CardActions>
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
-            <Typography paragraph>
-              <Comments />
-            </Typography>
+            <div>
+              {Array.from(comments).map((com) => {
+                return (
+                  <div
+                    key={com.id}
+                    className="flex justify-between mb-3 border-t border-stone-600"
+                  >
+                    <div>
+                      <p className="font-title my-1">{com.comName} </p>
+                      <p className="font-main">{com.comText} </p>
+                    </div>
+                    <div>
+                      <IconButton
+                        aria-label="settings"
+                        onClick={handleDeleteComment}
+                      >
+                        <ClearIcon />
+                      </IconButton>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </CardContent>
         </Collapse>
       </Card>

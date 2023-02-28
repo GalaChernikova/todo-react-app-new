@@ -16,21 +16,22 @@ export const postSlice = createSlice({
       title: "You've made a list, now it's time to check it twice",
       body: "It's easy to lose track of tasks, but there's no better feeling than crossing one off the list! What are your top three priorities on your to-do list right now?",
       comments: [
-        { comId: uuidv4(), comName: randomName, comText: "Nice!" },
+        { id: uuidv4(), comName: "Elen", comText: "Nice!" },
         {
-          comId: uuidv4(),
-          comName: randomName,
+          id: uuidv4(),
+          comName: "Alice",
           comText: "I want to keep track on the things I do",
         },
         {
-          comId: uuidv4(),
-          comName: randomName,
-          comText: "1. keep it simple 2. be persistent 3. remember that it's okay if smth isn't done yet",
+          id: uuidv4(),
+          comName: "Mark",
+          comText:
+            "1. keep it simple 2. be persistent 3. remember that it's okay if smth isn't done yet",
         },
-        { comId: uuidv4(), comName: randomName, comText: "🔥🔥🔥" },
+        { id: uuidv4(), comName: "John", comText: "🔥🔥🔥" },
         {
-          comId: uuidv4(),
-          comName: randomName,
+          id: uuidv4(),
+          comName: "Danny",
           comText: "it's so hard for me to make these todo-lists 🤦",
         },
       ],
@@ -41,10 +42,10 @@ export const postSlice = createSlice({
       title: "Everyone has a never-ending to-do list!",
       body: "From simple tasks like cleaning up the house to complex goals like starting a business, there's always something you can do to improve. What are your top 3 items on your to-do list today?",
       comments: [
-        { comId: uuidv4(), comName: randomName, comText: "👍👍👍" },
+        { id: uuidv4(), comName: "Alice", comText: "👍👍👍" },
         {
-          comId: uuidv4(),
-          comName: randomName,
+          id: uuidv4(),
+          comName: "John",
           comText: "my top 3 are: get up, go to work and make a dinner 😁",
         },
       ],
@@ -55,13 +56,13 @@ export const postSlice = createSlice({
       title: "To-do lists have never been more important!",
       body: "Keeping a list of your tasks can help you stay organized and productive throughout the day. Share with us below the one task that you're most looking forward to crossing off your list today!",
       comments: [
-        { comId: uuidv4(), comName: randomName, comText: "do some shopping 😋" },
+        { id: uuidv4(), comName: "Kate", comText: "do some shopping 😋" },
         {
-          comId: uuidv4(),
-          comName: randomName,
+          id: uuidv4(),
+          comName: "Ann",
           comText: "make 3 zoom calls and a doctor appointment for tomorrow",
         },
-        { comId: uuidv4(), comName: randomName, comText: "🌸🌸🌸" },
+        { id: uuidv4(), comName: "Liza", comText: "🌸🌸🌸" },
       ],
     },
   ],
@@ -83,13 +84,13 @@ export const postSlice = createSlice({
       const comment = {
         id: uuidv4(),
         name: randomName,
-        text: action.payload.comments.text,
+        text: action.payload.text,
       };
       state.push(comment);
     },
     deleteComment: (state, action) => {
       return state.filter(
-        (comment) => comment.id !== action.payload.comments.id
+        (comment) => comment.id !== action.payload.id
       );
     },
   },

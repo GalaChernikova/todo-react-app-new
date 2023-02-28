@@ -18,7 +18,7 @@ export default function MyPosts() {
                 date={post.date}
                 title={post.title}
                 body={post.body}
-                reactions={post.reactions}
+                comments={post.comments}
               />
             </div>
           );
