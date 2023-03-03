@@ -79,7 +79,7 @@ export default function NavMobile() {
           </NavLink>
         </MenuItem>
         <MenuItem onClick={handleClose}>
-          <NavLink to="/login" className="flex items-center">
+          <NavLink to="*" className="flex items-center">
             {FiLogOut()}
             <p className="ml-3 font-main text-stone-600 hover:underline">
               LOGOUT
