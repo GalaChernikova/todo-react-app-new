@@ -11,25 +11,25 @@ export default function RegisterForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-1/2 mx-auto md:w-full">
-      <h2 className="font-title mb-5 text-2xl text-stone-600">Register</h2>
+      <h2 className="font-title mb-5 text-2xl text-red-50">Register</h2>
 
       <input
         type="text"
         placeholder="First name"
         {...register("First name", { required: true, maxLength: 80 })}
-        className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
+        className="rounded-xl p-2 text-lg text-red-50 placeholder:text-red-50 placeholder:font-main mb-3 w-full border-red-50 outline-red-50 border-2 bg-transparent sm:text-sm"
       />
       <input
         type="text"
         placeholder="Last name"
         {...register("Last name", { required: true, maxLength: 100 })}
-        className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
+        className="rounded-xl p-2 text-lg text-red-50 placeholder:text-red-50 placeholder:font-main mb-3 w-full border-red-50 outline-red-50 border-2 bg-transparent sm:text-sm"
       />
       <input
         type="text"
         placeholder="Email"
         {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
-        className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
+        className="rounded-xl p-2 text-lg text-red-50 placeholder:text-red-50 placeholder:font-main mb-3 w-full border-red-50 outline-red-50 border-2 bg-transparent sm:text-sm"
       />
       <input
         type="tel"
@@ -39,19 +39,19 @@ export default function RegisterForm() {
           minLength: 6,
           maxLength: 12,
         })}
-        className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
+        className="rounded-xl p-2 text-lg text-red-50 placeholder:text-red-50 placeholder:font-main mb-3 w-full border-red-50 outline-red-50 border-2 bg-transparent sm:text-sm"
       />
       <input
         type="password"
         placeholder="Password"
         {...register("Password", {})}
-        className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
+        className="rounded-xl p-2 text-lg  text-red-50 placeholder:text-red-50 placeholder:font-main mb-3 w-full border-red-50 outline-red-50 border-2 bg-transparent sm:text-sm"
       />
 
 
       <button
         type="submit"
-        className="text-lg bg-stone-600 rounded-xl text-white-bg drop-shadow-xl py-2 px-5 w-40 hover:bg-stone-800 sm:text-sm font-main"
+        className="text-xl font-main text-stone-600 border-red-50 bg-red-50 border-2 rounded-xl drop-shadow-xl py-2 px-10 w-40 mb-auto mx-auto hover:border-red-100 hover:bg-red-100 lg:text-lg sm:text-base"
       >
         Register
       </button>

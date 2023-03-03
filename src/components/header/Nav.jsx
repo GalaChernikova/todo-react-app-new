@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
-import { FiCheckSquare, FiUsers, FiHeart, FiLogIn } from "react-icons/fi";
+import { FiCheckSquare, FiUsers, FiHeart, FiLogOut } from "react-icons/fi";
 import NavMobile from "./NavMobile";
 
 export default function Nav() {
@@ -14,10 +14,7 @@ export default function Nav() {
       </NavLink>
 
       <div className="flex justify-between items-center w-2/3 mr-[30px] lg:hidden">
-        <NavLink to="/login" className="flex items-center">
-          <p className="mr-3 hover:underline">LOGIN </p>
-          {FiLogIn()}
-        </NavLink>
+
         <NavLink to="/general" className="flex items-center">
           <p className="mr-3 hover:underline">MY TO-DO </p>
           {FiCheckSquare()}
@@ -30,6 +27,11 @@ export default function Nav() {
           <p className="mr-3 hover:underline">ABOUT</p>
           {FiHeart()}
         </NavLink>
+        <NavLink to="*" className="flex items-center">
+          <p className="mr-3 hover:underline">LOGOUT </p>
+          {FiLogOut()}
+        </NavLink>
+        
       </div>
 
       <NavMobile />

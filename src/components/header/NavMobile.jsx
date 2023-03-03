@@ -7,7 +7,7 @@ import {
   FiCheckSquare,
   FiUsers,
   FiHeart,
-  FiLogIn,
+  FiLogOut,
 } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import style from "./NavMobile.css";
@@ -44,19 +44,12 @@ export default function NavMobile() {
         }}
         className={style}
       >
-        <MenuItem onClick={handleClose}>
-          <NavLink to="/login" className="flex items-center">
-            {FiLogIn()}
-            <p className="ml-3 font-main text-stone-600 hover:underline">
-              LOGIN{" "}
-            </p>
-          </NavLink>
-        </MenuItem>
+
         <MenuItem onClick={handleClose}>
           <NavLink to="/general" className="flex items-center">
             {FiCheckSquare()}
             <p className="ml-3 font-main text-stone-600 hover:underline">
-              MY TO-DO{" "}
+              MY TO-DO
             </p>
           </NavLink>
         </MenuItem>
@@ -73,6 +66,14 @@ export default function NavMobile() {
             {FiHeart()}
             <p className="ml-3 font-main text-stone-600 hover:underline">
               ABOUT
+            </p>
+          </NavLink>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <NavLink to="/login" className="flex items-center">
+            {FiLogOut()}
+            <p className="ml-3 font-main text-stone-600 hover:underline">
+              LOGOUT
             </p>
           </NavLink>
         </MenuItem>

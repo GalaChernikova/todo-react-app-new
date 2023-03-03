@@ -31,7 +31,7 @@ export default function Main() {
       </div>
 
       <NavLink
-        to="/general"
+        to="/login"
         className="text-4xl font-main text-red-50 border-red-50 border-2 rounded-3xl drop-shadow-xl py-4 px-10 mb-auto mx-auto hover:text-stone-600 hover:bg-red-50 lg:text-2xl sm:text-base"
       >
         <Fade cascade damping={0.1}>
