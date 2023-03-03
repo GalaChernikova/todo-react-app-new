@@ -1,4 +1,7 @@
 import { useForm } from "react-hook-form";
+import { NavLink } from "react-router-dom";
+import { Fade } from "react-awesome-reveal";
+import { FiX } from "react-icons/fi";
 
 export default function RegisterForm() {
   const {
@@ -11,6 +14,13 @@ export default function RegisterForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-1/2 mx-auto md:w-full">
+      <NavLink
+        to="*"
+      >
+        <Fade cascade damping={0.1}>
+          <p className="ml-auto text-3xl text-red-50 w-10 p-2">{FiX()}</p>
+        </Fade>
+      </NavLink>
       <h2 className="font-title mb-5 text-2xl text-red-50">Register</h2>
 
       <input

@@ -29,13 +29,13 @@ export default function AddPost() {
           type="text"
           placeholder="Title"
           onChange={(event) => setNewTitle(event.target.value)}
-          className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
+          className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border bg-transparent sm:text-sm"
         />
         <textarea
           type="text"
           placeholder="Add post.."
           onChange={(event) => setNewPost(event.target.value)}
-          className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
+          className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border bg-transparent sm:text-sm"
         />
 
         <button

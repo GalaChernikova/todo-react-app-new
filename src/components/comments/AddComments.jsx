@@ -24,7 +24,7 @@ export default function AddComments() {
       >
         <input
           type="text"
-          className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
+          className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border bg-transparent sm:text-sm"
           placeholder="Add comment..."
           value={comment}
           onChange={(event) => setComment(event.target.value)}

@@ -8,6 +8,7 @@ import {
   FiUsers,
   FiHeart,
   FiLogOut,
+  FiSliders
 } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import style from "./NavMobile.css";
@@ -66,6 +67,14 @@ export default function NavMobile() {
             {FiHeart()}
             <p className="ml-3 font-main text-stone-600 hover:underline">
               ABOUT
+            </p>
+          </NavLink>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
+          <NavLink to="/settings" className="flex items-center">
+            {FiSliders()}
+            <p className="ml-3 font-main text-stone-600 hover:underline">
+              SETTINGS
             </p>
           </NavLink>
         </MenuItem>

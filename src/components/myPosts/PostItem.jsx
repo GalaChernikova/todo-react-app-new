@@ -13,7 +13,6 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ClearIcon from "@mui/icons-material/Clear";
-import { FiUser } from "react-icons/fi";
 import { useDispatch } from "react-redux";
 import { deleteComment, deletePost } from "../../redux/postSlice";
 import avatar from "./../../images/avatar.png";
@@ -68,7 +67,6 @@ export default function PostItem({
         <CardHeader
           avatar={
             <Avatar src={avatar} id="avatar">
-              {FiUser()}
             </Avatar>
           }
           action={

@@ -22,7 +22,7 @@ export default function MyToDo() {
       <form onSubmit={onSubmit} className="my-3 max-w-md w-full lg:max-w-lg">
         <input
           type="text"
-          className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
+          className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border bg-transparent sm:text-sm"
           placeholder="Add todo..."
           value={value}
           onChange={(event) => setValue(event.target.value)}

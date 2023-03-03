@@ -9,7 +9,7 @@ export default function GeneralPage(){
             <Nav />
             
             <div className="flex gap-5 w-10/12 mx-auto justify-between lg:flex-col lg:justify-center">
-                <div className="w-1/4 lg:w-full mx-auto font-main text-2xl text-stone-600 bg-white-bg rounded-2xl p-4 drop-shadow-md">
+                <div className="w-1/4 lg:w-full mx-auto font-main text-2xl text-stone-600 bg-white-bg rounded-2xl p-4 shadow-md">
                     <h2 className="font-title mb-5">My TO-DO list</h2>
                     <TodoList />
                     <MyToDo />
