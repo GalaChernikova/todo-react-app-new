@@ -19,7 +19,8 @@ import { deleteComment, deletePost } from "../../redux/postSlice";
 import avatar from "./../../images/avatar.png";
 import Rating from "@mui/material/Rating";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import Comments from "../comments/Comments";
+import AddComments from "../comments/AddComments";
+import style from './PostItem.css'
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -63,7 +64,7 @@ export default function PostItem({
 
   return (
     <div>
-      <Card id="card" key={id}>
+      <Card id="card" key={id} className={style}>
         <CardHeader
           avatar={
             <Avatar src={avatar} id="avatar">
@@ -112,28 +113,34 @@ export default function PostItem({
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <div>
-              {Array.from(comments).map((com) => {
-                return (
-                  <div
-                    key={com.id}
-                    className="flex justify-between mb-3 border-t border-stone-600"
-                  >
-                    <div>
-                      <p className="font-title my-1">{com.comName} </p>
-                      <p className="font-main">{com.comText} </p>
+              <div>
+                <AddComments />
+              </div>
+              <div>
+                {Array.from(comments).map((com) => {
+                  return (
+                    <div
+                      key={com.id}
+                      className="flex justify-between mb-3 border-t border-stone-600"
+                    >
+                      <div>
+                        <p className="font-title my-1">{com.comName} </p>
+                        <p className="font-main">{com.comText} </p>
+                      </div>
+                      <div>
+                        <IconButton
+                          aria-label="settings"
+                          onClick={handleDeleteComment}
+                        >
+                          <ClearIcon />
+                        </IconButton>
+                      </div>
                     </div>
-                    <div>
-                      <IconButton
-                        aria-label="settings"
-                        onClick={handleDeleteComment}
-                      >
-                        <ClearIcon />
-                      </IconButton>
-                    </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div>              
             </div>
+
           </CardContent>
         </Collapse>
       </Card>

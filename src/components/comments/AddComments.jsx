@@ -1,38 +1,40 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { addTask } from "../../redux/todoSlice";
+import { addComment } from "../../redux/postSlice";
 
-export default function MyToDo() {
-  const [value, setValue] = useState("");
+export default function AddComments() {
+  const [comment, setComment] = useState("");
   const dispatch = useDispatch();
 
-  const onSubmit = (event) => {
+  const onSubmitComment = (event) => {
     event.preventDefault();
-    if (value) {
+    if (comment) {
       dispatch(
-        addTask({
-          title: value,
+        addComment({
+            comText: comment,
         })
       );
     }
   };
-
   return (
     <div className="flex flex-col font-main text-stone-600">
-      <form onSubmit={onSubmit} className="my-3 max-w-md w-full lg:max-w-lg">
+      <form
+        onSubmit={onSubmitComment}
+        className="my-3 max-w-md w-full lg:max-w-lg"
+      >
         <input
           type="text"
           className="rounded-xl px-5 py-2 text-lg mb-3 w-full border-stone-600 border-2 bg-transparent sm:text-sm"
-          placeholder="Add todo..."
-          value={value}
-          onChange={(event) => setValue(event.target.value)}
+          placeholder="Add comment..."
+          value={comment}
+          onChange={(event) => setComment(event.target.value)}
         ></input>
 
         <button
           type="submit"
           className="text-lg bg-stone-600 rounded-xl text-white-bg drop-shadow-xl py-2 px-5 w-40 hover:bg-stone-800 sm:text-sm"
         >
-          Add task
+          Add comment
         </button>
       </form>
     </div>

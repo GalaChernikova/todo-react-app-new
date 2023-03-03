@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { v4 as uuidv4 } from "uuid";
-
 let date = new Date();
 let currentDate = date.toUTCString();
 
@@ -81,17 +80,20 @@ export const postSlice = createSlice({
     },
 
     addComment: (state, action) => {
+      let allComments = state.comments;
       const comment = {
-        id: uuidv4(),
-        name: randomName,
-        text: action.payload.text,
+        
+          id: uuidv4(),
+          comName: randomName,
+          comText: action.payload.comText,
+      
       };
-      state.push(comment);
+
+      allComments.push(comment);
     },
     deleteComment: (state, action) => {
-      return state.filter(
-        (comment) => comment.id !== action.payload.id
-      );
+      let allComments = state.comments;
+      return allComments.filter((comment) => comment.id !== action.payload.id);
     },
   },
 });

@@ -2,9 +2,15 @@ import * as React from "react";
 import Button from "@mui/material/Button";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import { FiMenu, FiCheckSquare, FiUsers, FiHeart } from "react-icons/fi";
+import {
+  FiMenu,
+  FiCheckSquare,
+  FiUsers,
+  FiHeart,
+  FiLogIn,
+} from "react-icons/fi";
 import { NavLink } from "react-router-dom";
-import style from './NavMobile.css'
+import style from "./NavMobile.css";
 
 export default function NavMobile() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -25,7 +31,6 @@ export default function NavMobile() {
         aria-expanded={open ? "true" : undefined}
         onClick={handleClick}
         className="mobNavButton"
-        
       >
         {FiMenu()}
       </Button>
@@ -40,26 +45,38 @@ export default function NavMobile() {
         className={style}
       >
         <MenuItem onClick={handleClose}>
+          <NavLink to="/login" className="flex items-center">
+            {FiLogIn()}
+            <p className="ml-3 font-main text-stone-600 hover:underline">
+              LOGIN{" "}
+            </p>
+          </NavLink>
+        </MenuItem>
+        <MenuItem onClick={handleClose}>
           <NavLink to="/general" className="flex items-center">
-            <p className="mr-3 font-main text-stone-600 hover:underline">MY TO-DO </p>
             {FiCheckSquare()}
+            <p className="ml-3 font-main text-stone-600 hover:underline">
+              MY TO-DO{" "}
+            </p>
           </NavLink>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <NavLink to="/friends" className="flex items-center">
-            <p className="mr-3 font-main text-stone-600 hover:underline">FRIENDS</p>
             {FiUsers()}
+            <p className="ml-3 font-main text-stone-600 hover:underline">
+              FRIENDS
+            </p>
           </NavLink>
         </MenuItem>
         <MenuItem onClick={handleClose}>
           <NavLink to="/about" className="flex items-center">
-            <p className="mr-3 font-main text-stone-600 hover:underline">ABOUT</p>
             {FiHeart()}
+            <p className="ml-3 font-main text-stone-600 hover:underline">
+              ABOUT
+            </p>
           </NavLink>
         </MenuItem>
       </Menu>
-
-
     </div>
   );
 }
