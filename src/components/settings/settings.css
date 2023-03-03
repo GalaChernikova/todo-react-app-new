@@ -1,0 +1,40 @@
+#buttonDefault,
+.bgDefault{
+    background: linear-gradient(125deg, rgba(252, 225, 208, 1) 30%, rgba(255, 173, 214, 1) 55.7%, rgba(162, 186, 245, 1) 81.8%);
+}
+
+#button_1,
+.bg_1 {
+    background: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+}
+
+
+#button_2,
+.bg_2 {
+    background: linear-gradient(64.3deg, rgba(254, 122, 152, 0.81) 17.7%, rgba(255, 206, 134, 1) 64.7%, rgba(172, 253, 163, 0.64) 112.1%);
+}
+
+#button_3,
+.bg_3 {
+    background: linear-gradient(358.4deg, rgba(249, 151, 119, 1) -2.1%, rgba(98, 58, 162, 1) 90%);
+}
+
+#button_4,
+.bg_4 {
+    background: radial-gradient(circle 673px at 10% 20%, rgba(255, 220, 163, 1) 0%, rgba(129, 255, 239, 1) 48.5%, rgba(139, 172, 251, 1) 97.8%);
+}
+
+#button_5,
+.bg_5 {
+    background: radial-gradient(circle farthest-corner at 5.6% 54.5%, rgba(47, 71, 79, 1) 0%, rgba(159, 188, 198, 1) 83.6%);
+}
+
+#button_6,
+.bg_6{
+    background: linear-gradient(109.6deg, rgba(247, 202, 201, 1) 20.6%, rgba(146, 168, 209, 1) 85.9%);
+}
+
+#button_7,
+.bg_7 {
+    background: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+}

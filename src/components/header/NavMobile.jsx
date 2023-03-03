@@ -11,7 +11,7 @@ import {
   FiSliders
 } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
-import style from "./NavMobile.css";
+import "./NavMobile.css";
 
 export default function NavMobile() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -43,7 +43,6 @@ export default function NavMobile() {
         MenuListProps={{
           "aria-labelledby": "basic-button",
         }}
-        className={style}
       >
 
         <MenuItem onClick={handleClose}>

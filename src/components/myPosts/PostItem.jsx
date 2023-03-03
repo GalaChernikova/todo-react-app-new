@@ -19,7 +19,7 @@ import avatar from "./../../images/avatar.png";
 import Rating from "@mui/material/Rating";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import AddComments from "../comments/AddComments";
-import style from './PostItem.css'
+import './PostItem.css'
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -63,7 +63,7 @@ export default function PostItem({
 
   return (
     <div>
-      <Card id="card" key={id} className={style}>
+      <Card id="card" key={id}>
         <CardHeader
           avatar={
             <Avatar src={avatar} id="avatar">
