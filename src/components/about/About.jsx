@@ -11,7 +11,7 @@ export default function About() {
 
         <div className="flex items-center justify-evenly md:flex-col">
           <div>
-            <img src={aboutImg} alt="about_img" />
+            <img src={aboutImg} alt="about_img" className="sm:w-60"/>
           </div>
           <div className="">
             <p className="max-w-md mb-3 text-lg xl:text-base xl:max-w-sm md:w-full md:max-w-none">

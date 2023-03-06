@@ -6,6 +6,7 @@ let currentDate = date.toUTCString();
 const names = require("random-names-generator");
 const randomName = names.random();
 
+
 export const postSlice = createSlice({
   name: "post",
   initialState: [

@@ -3,49 +3,41 @@ import "./settings.css";
 export default function ChangeBg() {
   function handleColorClickDefault(e) {
     e.preventDefault();
-    let rootBg = document.getElementById("root");
-    rootBg.classList.toggle("bgDefault");
+    document.body.classList.toggle("bgDefault");
   }
   function handleColorClick1(e) {
     e.preventDefault();
-    let rootBg = document.getElementById("root");
-    rootBg.classList.toggle("bg_1");
+    document.body.classList.toggle("bg_1");
   }
 
   function handleColorClick2(e) {
     e.preventDefault();
-    let rootBg = document.getElementById("root");
-    rootBg.classList.toggle("bg_2");
+    document.body.classList.toggle("bg_2");
   }
 
   function handleColorClick3(e) {
     e.preventDefault();
-    let rootBg = document.getElementById("root");
-    rootBg.classList.toggle("bg_3");
+    document.body.classList.toggle("bg_3");
   }
 
   function handleColorClick4(e) {
     e.preventDefault();
-    let rootBg = document.getElementById("root");
-    rootBg.classList.toggle("bg_4");
+    document.body.classList.toggle("bg_4");
   }
 
   function handleColorClick5(e) {
     e.preventDefault();
-    let rootBg = document.getElementById("root");
-    rootBg.classList.toggle("bg_5");
+    document.body.classList.toggle("bg_5");
   }
 
   function handleColorClick6(e) {
     e.preventDefault();
-    let rootBg = document.getElementById("root");
-    rootBg.classList.toggle("bg_6");
+    document.body.classList.toggle("bg_6");
   }
 
   function handleColorClick7(e) {
     e.preventDefault();
-    let rootBg = document.getElementById("root");
-    rootBg.classList.toggle("bg_7");
+    document.body.classList.toggle("bg_7");
   }
 
   return (
