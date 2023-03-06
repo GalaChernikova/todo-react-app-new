@@ -5,7 +5,7 @@ import LoginForm from "./login/LoginForm";
 
 export default function LoginPage() {
   return (
-    <div className="flex flex-col bg-main min-h-screen bg-cover bg-no-repeat bg-center lg:p-10">
+    <div className="flex flex-col bg-main min-h-screen bg-cover bg-no-repeat bg-center lg:p-10 sm:py-2">
       <div className="m-auto pb-20 sm:mt-0">
         <Fade cascade damping={0.1}>
           <RegisterForm />
